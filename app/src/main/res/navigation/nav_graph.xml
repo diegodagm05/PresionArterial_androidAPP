@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.delnortedevs.pappcontrol.LaunchFragment"
+        android:label="fragment_launch"
+        tools:layout="@layout/fragment_launch" >
+        <action
+            android:id="@+id/action_launchFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_launchFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.delnortedevs.pappcontrol.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeDoctorFragment"
+            app:destination="@id/homeDoctorFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homePatientFragment"
+            app:destination="@id/homePatientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.delnortedevs.pappcontrol.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_registerTwoFragment"
+            app:destination="@id/registerTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerTwoFragment"
+        android:name="com.delnortedevs.pappcontrol.RegisterTwoFragment"
+        android:label="fragment_register_two"
+        tools:layout="@layout/fragment_register_two" >
+        <action
+            android:id="@+id/action_registerTwoFragment_to_homePatientFragment"
+            app:destination="@id/homePatientFragment" />
+        <action
+            android:id="@+id/action_registerTwoFragment_to_homeDoctorFragment2"
+            app:destination="@id/homeDoctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePatientFragment"
+        android:name="com.delnortedevs.pappcontrol.HomePatientFragment"
+        android:label="fragment_home_patient"
+        tools:layout="@layout/fragment_home_patient" >
+        <action
+            android:id="@+id/action_homePatientFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homePatientFragment_to_takePressionFragment"
+            app:destination="@id/takePressionFragment" />
+        <action
+            android:id="@+id/action_homePatientFragment_to_launchFragment"
+            app:destination="@id/launchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeDoctorFragment"
+        android:name="com.delnortedevs.pappcontrol.HomeDoctorFragment"
+        android:label="fragment_home_doctor"
+        tools:layout="@layout/fragment_home_doctor" >
+        <action
+            android:id="@+id/action_homeDoctorFragment_to_individualPatientFragment"
+            app:destination="@id/individualPatientFragment" />
+        <action
+            android:id="@+id/action_homeDoctorFragment_to_launchFragment"
+            app:destination="@id/launchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/individualPatientFragment"
+        android:name="com.delnortedevs.pappcontrol.IndividualPatientFragment"
+        android:label="fragment_individual_patient"
+        tools:layout="@layout/fragment_individual_patient" >
+        <action
+            android:id="@+id/action_individualPatientFragment_to_homeDoctorFragment"
+            app:destination="@id/homeDoctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/takePressionFragment"
+        android:name="com.delnortedevs.pappcontrol.TakePressionFragment"
+        android:label="fragment_take_pression"
+        tools:layout="@layout/fragment_take_pression" >
+        <action
+            android:id="@+id/action_takePressionFragment_to_homePatientFragment"
+            app:destination="@id/homePatientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.delnortedevs.pappcontrol.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homePatientFragment"
+            app:destination="@id/homePatientFragment" />
+    </fragment>
+</navigation>
