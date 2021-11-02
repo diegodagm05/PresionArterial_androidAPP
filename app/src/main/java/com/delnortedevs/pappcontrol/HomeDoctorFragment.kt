@@ -42,6 +42,13 @@ class HomeDoctorFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentHomeDoctorBinding.inflate(inflater, container, false)
 
+
+        binding.btnAddPatient.setOnClickListener{
+
+        }
+
+
+
         binding.btnAddPatient.setOnClickListener{
             findNavController().navigate(R.id.action_homeDoctorFragment_to_individualPatientFragment)
         }
@@ -67,4 +74,10 @@ class HomeDoctorFragment : Fragment() {
                 }
             }
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }
