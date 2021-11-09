@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.delnortedevs.pappcontrol.databinding.FragmentHomeDoctorBinding
 import com.delnortedevs.pappcontrol.databinding.FragmentHomePatientBinding
 
@@ -42,11 +43,22 @@ class HomeDoctorFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentHomeDoctorBinding.inflate(inflater, container, false)
 
+        var patientsList = listOf(
+            Patient("Mariana", 30),
+            Patient("Juan", 29),
+            Patient("Carlos", 38),
+            Patient("Maria", 42)
+
+        )
+
+        //initialize Adapter
+        val adapter = AdapterPatient(patientsList)
+        binding.rvPatient.adapter = adapter
+        binding.rvPatient.layoutManager = LinearLayoutManager(this.context)
 
         binding.btnAddPatient.setOnClickListener{
 
         }
-
 
 
         binding.btnAddPatient.setOnClickListener{
