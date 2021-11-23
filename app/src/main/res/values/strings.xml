@@ -13,4 +13,6 @@
     <string name="twodaysago_viewtitle">Hace 2 días</string>
     <string name="yesterday_viewtitle">Ayer</string>
     <string name="todaypressure_viewtitle">Hoy</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
 </resources>
