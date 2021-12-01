@@ -11,7 +11,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Presión Arterial"
+        android:layout_marginTop="24dp"
+        android:text="@string/presion_arterial"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/heart"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,19 +22,23 @@
 
     <ImageView
         android:id="@+id/heart"
-        android:src="@drawable/heart"
-        android:layout_width="250sp"
-        android:layout_height="150sp"
+        android:layout_width="175sp"
+        android:layout_height="175sp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/heart_launch"
         app:layout_constraintBottom_toTopOf="@+id/LoginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:contentDescription="@string/presion_arterial" />
 
     <Button
         android:id="@+id/LoginButton"
-        android:text="Iniciar sesión"
         android:layout_width="200sp"
         android:layout_height="55sp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/btnColor1"
+        android:text="@string/iniciar_sesion"
         app:layout_constraintBottom_toTopOf="@+id/RegisterButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,10 +48,12 @@
         android:id="@+id/RegisterButton"
         android:layout_width="200sp"
         android:layout_height="55sp"
-        android:text="Crear cuenta"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/btnColor2"
+        android:text="@string/crear_cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
