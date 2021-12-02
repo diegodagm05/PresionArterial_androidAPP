@@ -8,6 +8,11 @@ import android.view.ViewGroup
 import java.text.SimpleDateFormat
 import java.util.*
 import com.delnortedevs.pappcontrol.databinding.FragmentTakePressionBinding
+import android.widget.CompoundButton
+import android.widget.Toast
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -48,10 +53,45 @@ class TakePressionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var fecha = "Hoy es: "
-        /*val format = SimpleDateFormat("dd/MM/yyyy")
-        val date = format.parse(Date().toString())*/
-        fecha = fecha.plus(Date().toString())
+        val format = SimpleDateFormat("dd/MM/yyyy")
+        val date = format.format(Date())
+        fecha = fecha.plus(date)
         binding.tvFecha.text = fecha
+
+        var sTriplicado = false
+        binding.switchTriplicado.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                sTriplicado = true
+                binding.pSistolica1.visibility = View.VISIBLE
+                binding.pDiastolica1.visibility = View.VISIBLE
+                binding.pulso1.visibility = View.VISIBLE
+
+                binding.pSistolica2.visibility = View.VISIBLE
+                binding.pDiastolica2.visibility = View.VISIBLE
+                binding.pulso2.visibility = View.VISIBLE
+            }
+            else {
+                sTriplicado = false
+                binding.pSistolica1.visibility = View.INVISIBLE
+                binding.pDiastolica1.visibility = View.INVISIBLE
+                binding.pulso1.visibility = View.INVISIBLE
+
+                binding.pSistolica2.visibility = View.INVISIBLE
+                binding.pDiastolica2.visibility = View.INVISIBLE
+                binding.pulso2.visibility = View.INVISIBLE
+            }
+        }
+
+        binding.btnGuardarPresion.setOnClickListener{
+            if(sTriplicado){
+                //pasar valores para el triplicado
+                Toast.makeText(activity, "¡Presión por triplicado guardada correctamente!", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                //pasar valores para 1 toma de presion
+                Toast.makeText(activity, "¡Presión guardada correctamente!", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     companion object {

@@ -68,10 +68,103 @@
         android:text="@string/guardar_datos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pDiastolica2" />
 
     <EditText
         android:id="@+id/pSistolica"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/presion_sistolica"
+        android:inputType="number"
+        android:minHeight="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/pSistolica1"
+        app:layout_constraintEnd_toStartOf="@+id/pDiastolica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchTriplicado" />
+
+    <EditText
+        android:id="@+id/pDiastolica"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="@string/presion_diastolica"
+        android:inputType="number"
+        android:minHeight="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/pDiastolica1"
+        app:layout_constraintEnd_toStartOf="@+id/pulso"
+        app:layout_constraintStart_toEndOf="@+id/pSistolica"
+        app:layout_constraintTop_toBottomOf="@+id/switchTriplicado" />
+
+    <EditText
+        android:id="@+id/pulso"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/pulso"
+        android:inputType="number"
+        android:minHeight="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/pulso1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pDiastolica"
+        app:layout_constraintTop_toBottomOf="@+id/switchTriplicado" />
+
+    <EditText
+        android:id="@+id/pSistolica1"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/presion_sistolica"
+        android:inputType="number"
+        android:minHeight="48sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pSistolica2"
+        app:layout_constraintEnd_toStartOf="@+id/pDiastolica1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pSistolica" />
+
+    <EditText
+        android:id="@+id/pDiastolica1"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="@string/presion_diastolica"
+        android:inputType="number"
+        android:minHeight="48sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pDiastolica2"
+        app:layout_constraintEnd_toStartOf="@+id/pulso1"
+        app:layout_constraintStart_toEndOf="@+id/pSistolica1"
+        app:layout_constraintTop_toBottomOf="@+id/pDiastolica" />
+
+    <EditText
+        android:id="@+id/pulso1"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/pulso"
+        android:inputType="number"
+        android:minHeight="48sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pulso2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pDiastolica1"
+        app:layout_constraintTop_toBottomOf="@+id/pulso" />
+
+
+    <EditText
+        android:id="@+id/pSistolica2"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -79,14 +172,15 @@
         android:ems="10"
         android:hint="@string/presion_sistolica"
         android:inputType="number"
+        android:minHeight="48sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/btnGuardarPresion"
-        app:layout_constraintEnd_toStartOf="@+id/pDiastolica"
+        app:layout_constraintEnd_toStartOf="@+id/pDiastolica2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switchTriplicado"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintTop_toBottomOf="@+id/pSistolica1" />
 
     <EditText
-        android:id="@+id/pDiastolica"
+        android:id="@+id/pDiastolica2"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -96,14 +190,15 @@
         android:ems="10"
         android:hint="@string/presion_diastolica"
         android:inputType="number"
+        android:minHeight="48sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/btnGuardarPresion"
-        app:layout_constraintEnd_toStartOf="@+id/pulso"
-        app:layout_constraintStart_toEndOf="@+id/pSistolica"
-        app:layout_constraintTop_toBottomOf="@+id/switchTriplicado"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintEnd_toStartOf="@+id/pulso2"
+        app:layout_constraintStart_toEndOf="@+id/pSistolica2"
+        app:layout_constraintTop_toBottomOf="@+id/pDiastolica1" />
 
     <EditText
-        android:id="@+id/pulso"
+        android:id="@+id/pulso2"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -111,20 +206,11 @@
         android:ems="10"
         android:hint="@string/pulso"
         android:inputType="number"
+        android:minHeight="48sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/btnGuardarPresion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pDiastolica"
-        app:layout_constraintTop_toBottomOf="@+id/switchTriplicado"
-        app:layout_constraintVertical_bias="0.33" />
-    <!--
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Presión sistólica"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="300dp" />
-    -->
+        app:layout_constraintStart_toEndOf="@+id/pDiastolica2"
+        app:layout_constraintTop_toBottomOf="@+id/pulso1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
