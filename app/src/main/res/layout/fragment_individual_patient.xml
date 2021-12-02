@@ -1,202 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".IndividualPatientFragment">
 
     <TextView
-        android:id="@+id/title_text"
+        android:id="@+id/textView_Registrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/presion_arterial"
+        android:text="Individual Patient"
         android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/info_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/informacion_de_paciente"
-        android:textSize="20sp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_text" />
-
-    <TextView
-        android:id="@+id/nombre_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/nombre"
-        android:textSize="16sp"
-
-        app:layout_constraintStart_toStartOf="@+id/nombre_paciente"
-        app:layout_constraintTop_toBottomOf="@id/info_titulo" />
-
-    <TextView
-        android:id="@+id/nombre_paciente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nombre paciente"
-
-        app:layout_constraintEnd_toStartOf="@id/telefono_paciente"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nombre_titulo"
-
-        />
-
-    <TextView
-        android:id="@+id/telefono_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/telfono_titulo"
-        android:textSize="16sp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/nombre_titulo"
-        app:layout_constraintTop_toBottomOf="@id/info_titulo" />
-
-    <TextView
-        android:id="@+id/telefono_paciente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="telefono paciente"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/nombre_paciente"
-        app:layout_constraintTop_toBottomOf="@id/nombre_titulo" />
-
-    <TextView
-        android:id="@+id/edad_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Edad"
-        android:textSize="16sp"
-
-        app:layout_constraintStart_toStartOf="@+id/nombre_titulo"
-        app:layout_constraintTop_toBottomOf="@id/nombre_paciente" />
-
-    <TextView
-        android:id="@+id/circunferencia_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Circunferencia abdominal (cm)"
-
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/edad_titulo"
-        app:layout_constraintTop_toBottomOf="@id/telefono_paciente" />
-
-    <TextView
-        android:id="@+id/edad_paciente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="edad px"
-
-        app:layout_constraintStart_toStartOf="@+id/edad_titulo"
-        app:layout_constraintTop_toBottomOf="@id/edad_titulo" />
-
-    <TextView
-        android:id="@+id/circunferencia_paciente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cirfunferencia paciente"
-
-        app:layout_constraintStart_toStartOf="@+id/circunferencia_titulo"
-        app:layout_constraintTop_toBottomOf="@id/circunferencia_titulo" />
-
-    <TextView
-        android:id="@+id/peso_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Peso (Kg)"
-        android:textSize="16sp"
-
-        app:layout_constraintStart_toStartOf="@+id/edad_titulo"
-        app:layout_constraintTop_toBottomOf="@id/edad_paciente" />
-
-    <TextView
-        android:id="@+id/sexo_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Sexo"
-        android:textSize="16sp"
-
-        app:layout_constraintStart_toStartOf="@+id/circunferencia_paciente"
-        app:layout_constraintTop_toBottomOf="@id/circunferencia_paciente" />
-
-    <TextView
-        android:id="@+id/peso_paciente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="peso px"
-
-
-        app:layout_constraintStart_toStartOf="@+id/peso_titulo"
-        app:layout_constraintTop_toBottomOf="@id/peso_titulo"
-
-        />
-
-    <TextView
-        android:id="@+id/sexo_paciente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sexo paciente"
-
-        app:layout_constraintStart_toStartOf="@+id/sexo_titulo"
-        app:layout_constraintTop_toBottomOf="@id/sexo_titulo"
-        />
-
-    <TextView
-        android:id="@+id/medicamentos_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textSize="24sp"
-        android:text="Medicamentos"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/peso_paciente" />
-
-    <TextView
-        android:id="@+id/paracetamol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Paracetamol"
-
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/medicamentos_titulo" />
-
-    <TextView
-        android:id="@+id/penicilina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Penicilina"
-
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/paracetamol" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
