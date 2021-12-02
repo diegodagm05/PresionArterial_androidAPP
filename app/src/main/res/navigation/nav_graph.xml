@@ -69,7 +69,7 @@
         android:id="@+id/homeDoctorFragment"
         android:name="com.delnortedevs.pappcontrol.HomeDoctorFragment"
         android:label="fragment_home_doctor"
-        tools:layout="@layout/fragment_home_doctor" >
+        tools:layout="@layout/fragment_home_doctor">
         <action
             android:id="@+id/action_homeDoctorFragment_to_individualPatientFragment"
             app:destination="@id/individualPatientFragment" />

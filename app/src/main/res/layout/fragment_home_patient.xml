@@ -7,12 +7,14 @@
     tools:context=".HomePatientFragment">
 
     <TextView
-        android:id="@+id/textView_Registrarse"
+        android:id="@+id/patient_home_title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home Patient"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/home_patient_title"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/patient_home_subtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,10 +23,159 @@
         android:id="@+id/btnTakePression"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tomar Presión"
+        android:layout_marginEnd="32dp"
+        android:text="@string/patient_home_btn_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todaypressure_viewtitle"
+        app:layout_constraintVertical_bias="0.49"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/patient_home_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/subtitle_patient_home"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Registrarse" />
+        app:layout_constraintTop_toBottomOf="@+id/patient_home_title" />
+
+    <TextView
+        android:id="@+id/patient_home_subsubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/subsubtitle_patient_home"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/patient_home_todays_pressure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patient_home_subtitle" />
+
+    <TextView
+        android:id="@+id/patient_home_todays_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/patient_home_todays_pressure"
+        app:layout_constraintBottom_toTopOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/patient_home_subsubtitle"
+        app:layout_constraintTop_toBottomOf="@+id/patient_home_subtitle" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="110dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/primaryColor"
+        app:layout_constraintEnd_toStartOf="@+id/view5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patient_home_subsubtitle" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="110dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="@+id/patient_home_todays_pressure" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="110dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toStartOf="@+id/view4"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/patient_home_subsubtitle" />
+
+    <TextView
+        android:id="@+id/twodaysago_pressure_inview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twodaysago_pressure_inview"
+        android:textColor="@color/primaryTextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/yesterday_pressure_inview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yesterday_pressure_inview"
+        android:textColor="@color/primaryTextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <TextView
+        android:id="@+id/today_pressure_inview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/today_pressure_inview"
+        android:textColor="@color/primaryTextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/twodaysago_viewtitle"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/todaypressure_viewtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/todaypressure_viewtitle"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/yesterday_viewtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/yesterday_viewtitle"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/editar_perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTakePression"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

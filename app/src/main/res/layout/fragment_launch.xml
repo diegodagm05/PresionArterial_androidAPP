@@ -11,33 +11,50 @@
         android:id="@+id/textView_Registrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Launch Fragment"
+        android:layout_marginTop="24dp"
+        android:text="@string/presion_arterial"
+        android:textColor="@color/black"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/heart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/heart"
+        android:layout_width="175sp"
+        android:layout_height="175sp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/heart_launch"
+        app:layout_constraintBottom_toTopOf="@+id/LoginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:contentDescription="@string/presion_arterial" />
+
     <Button
         android:id="@+id/LoginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginBottom="94dp"
-        android:text="Login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/RegisterButton"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="200sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/btnColor1"
+        android:text="@string/iniciar_sesion"
+        app:layout_constraintBottom_toTopOf="@+id/RegisterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heart" />
 
     <Button
         android:id="@+id/RegisterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="74dp"
-        android:layout_marginBottom="95dp"
-        android:text="Register"
+        android:layout_width="200sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/btnColor2"
+        android:text="@string/crear_cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/LoginButton" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
