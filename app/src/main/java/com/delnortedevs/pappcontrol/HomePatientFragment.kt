@@ -45,6 +45,11 @@ class HomePatientFragment : Fragment() {
         binding.btnTakePression.setOnClickListener{
             findNavController().navigate(R.id.action_homePatientFragment_to_takePressionFragment)
         }
+
+        binding.btnEditProfile.setOnClickListener{
+            findNavController().navigate(R.id.action_homePatientFragment_to_profileFragment)
+        }
+
         return binding.root
     }
 
