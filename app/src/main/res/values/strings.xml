@@ -9,4 +9,6 @@
     <string name="nombre">Nombre</string>
     <string name="string_nombre">Nombre</string>
     <string name="string_string_nombre">Nombre</string>
+    <string name="informacion_de_paciente">Información de paciente</string>
+    <string name="telfono_titulo">Teléfono</string>
 </resources>
