@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.delnortedevs.pappcontrol.databinding.FragmentLaunchBinding
 import com.delnortedevs.pappcontrol.databinding.FragmentLoginBinding
@@ -43,7 +44,15 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
         binding.btnLogin.setOnClickListener{
-            findNavController().navigate(R.id.action_loginFragment_to_homePatientFragment)
+            if(binding.editTextCorreo.text.toString() == "med.gonzalezg@gmail.com" && binding.editTextContra.text.toString() == "contra"){
+                findNavController().navigate(R.id.action_loginFragment_to_homeDoctorFragment)
+            }else{
+                if(binding.editTextCorreo.text.toString() == "med.gonzalezg@gmail.com" && binding.editTextContra.text.toString() != "contra"){
+                    Toast.makeText(activity, "El usuario o contraseña son incorrectos", Toast.LENGTH_SHORT).show()
+                }else {
+                    findNavController().navigate(R.id.action_loginFragment_to_homePatientFragment)
+                }
+            }
         }
         return binding.root
     }
@@ -59,12 +68,11 @@ class LoginFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            LoginFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+        fun newInstance(param1: String, param2: String) = LoginFragment().apply {
+            arguments = Bundle().apply {
+                putString(ARG_PARAM1, param1)
+                putString(ARG_PARAM2, param2)
             }
+        }
     }
 }
