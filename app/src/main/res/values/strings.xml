@@ -16,8 +16,6 @@
     <string name="guardar_cambios">Guardar Cambios</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="presion_arterial">Presión Arterial</string>
-    <string name="iniciar_sesion">Iniciar sesión</string>
-    <string name="crear_cuenta">Crear cuenta</string>
     <string name="tomar_presion">Tomar Presión</string>
     <string name="descripcion_tomar_presion">Tras haber tomado tu presión con tu baumanómetro, registra los siguientes datos.</string>
     <string name="fecha">Hoy es:</string>
@@ -34,4 +32,12 @@
     <string name="string_string_nombre">Nombre</string>
     <string name="informacion_de_paciente">Información de paciente</string>
     <string name="telfono_titulo">Teléfono</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="continuar">Continuar</string>
+    <string name="edad">Edad</string>
+    <string name="telefono">Telefono</string>
+    <string name="correo">Correo</string>
+    <string name="contra">Contraseña</string>
+    <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
 </resources>
