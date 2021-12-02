@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">PAppControl</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_patient_title">Presión Arterial</string>
+    <string name="subtitle_patient_home">Bienvenido Usuario</string>
+    <string name="subsubtitle_patient_home">Estatus de presión de hoy</string>
+    <string name="patient_home_btn_text">Tomar Presión</string>
+    <string name="patient_home_todays_pressure">Pendiente tomar medida</string>
+    <string name="twodaysago_pressure_inview">Normal</string>
+    <string name="yesterday_pressure_inview">Elevada</string>
+    <string name="today_pressure_inview">N/A</string>
+    <string name="twodaysago_viewtitle">Hace 2 días</string>
+    <string name="yesterday_viewtitle">Ayer</string>
+    <string name="todaypressure_viewtitle">Hoy</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="presion_arterial">Presión Arterial</string>
     <string name="iniciar_sesion">Iniciar sesión</string>
@@ -13,4 +26,12 @@
     <string name="presion_sistolica">Sistólica</string>
     <string name="presion_diastolica">Diastólica</string>
     <string name="pulso">Pulso</string>
+    <string name="bienvenido_doctor">Bienvenido Doctor</string>
+    <string name="agregar_paciente">Agregar Paciente</string>
+    <string name="pacientes">Pacientes:</string>
+    <string name="nombre">Nombre</string>
+    <string name="string_nombre">Nombre</string>
+    <string name="string_string_nombre">Nombre</string>
+    <string name="informacion_de_paciente">Información de paciente</string>
+    <string name="telfono_titulo">Teléfono</string>
 </resources>
