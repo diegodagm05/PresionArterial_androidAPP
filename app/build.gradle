@@ -63,7 +63,7 @@ dependencies {
     kapt("androidx.room:room-compiler:$roomVersion")
 
     implementation("androidx.room:room-ktx:$roomVersion")
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
 
     // Feature module Support
     implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
